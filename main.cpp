@@ -21,4 +21,22 @@ private:
         }
     };
     Node* head;
-    Nod
+    Node* tails;
+
+public:
+    // Constructor
+    DoublyLinkedList() { head = nullptr; tail = nullptr; }
+
+    void push_back(int value) {
+        Node* newNode = new Node(value);
+        if (!tail) // if there's no tail, the list is empty
+            head = tail = newNode;
+        else {
+            tail->next = newNode;
+            newNode->prev = tail;
+            tail = newNode;
+        }
+    }
+
+    void push_front(int value) {
+        Node* newNo
