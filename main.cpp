@@ -65,4 +65,15 @@ public:
         if (!temp) {
             cout << "Position exceeds list size. Node not inserted.\n";
             delete newNode;
-            retu
+            return;
+        }
+        newNode->next = temp->next;
+        newNode->prev = temp;
+        if (temp->next)
+            temp->next->prev = newNode;
+        else
+            tail = newNode; 
+        temp->next = newNode;
+    }
+
+    vo
