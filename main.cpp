@@ -209,4 +209,18 @@ int main() {
     list.print();
     
     cout << "List backward: ";
-    list.print_re
+    list.print_reverse();
+    
+    cout << "Deleting node at position 2: " << endl;
+    list.delete_pos(2);
+    list.print();
+    
+    cout << "Popping front: " << endl;
+    list.pop_front();
+    list.print();
+    
+    cout << "Popping back: " << endl;
+    list.pop_back();
+    list.print();
+    
+    cout << "D
