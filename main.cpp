@@ -168,3 +168,19 @@ public:
         delete temp;
     }
 
+    void print() {
+        Node* current = head;
+        if (!current) return;
+        while (current) {
+            cout << current->data << " ";
+            current = current->next;
+        }
+        cout << endl;
+    }
+
+    void print_reverse() {
+        Node* current = tail;
+        if (!current) return;
+        while (current) {
+            cout << current->data << " ";
+            curren
