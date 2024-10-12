@@ -39,4 +39,15 @@ public:
     }
 
     void push_front(int value) {
-        Node* newNo
+        Node* newNode = new Node(value);
+        if (!head) // if there's no head, the list is empty
+            head = tail = newNode;
+        else {
+            newNode->next = head;
+            head->prev = newNode;
+            head = newNode;
+        }
+    }
+
+    void insert_after(int value, int position) {
+        if (position <
