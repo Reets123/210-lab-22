@@ -156,4 +156,15 @@ public:
             temp = temp->next;
         if (!temp) return; // Value not found
         if (temp->prev) {
-            temp->
+            temp-> prev->next = temp->next;
+        } else {
+            head = temp->next; // Deleting the head
+        }
+        if (temp->next) {
+            temp->next->prev = temp->prev;
+        } else {
+            tail = temp->prev; // Deleting the tail
+        }
+        delete temp;
+    }
+
