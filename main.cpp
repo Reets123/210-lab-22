@@ -104,4 +104,50 @@ public:
     void pop_front() {
         if (!head) return; // Empty list
         Node* temp = head;
-        head =
+        head = head->next;
+        if (head) {
+            head->prev = nullptr;
+        } else {
+            tail = nullptr; // List is now empty
+        }
+        delete temp;
+    }
+
+    void pop_back() {
+        if (!tail) return; // Empty list
+        Node* temp = tail;
+        tail = head->next;
+        if (head) {
+            head->prev = nullptr;
+        } else {
+            tail = nullptr; // List is now empty
+        }
+        delete temp;
+    }
+
+    void pop_back() {
+        if (!tail) return; // Empty list
+        Node* temp = tail;
+        tail = head->next;
+        if (head) {
+            head->prev = nullptr;
+        } else {
+            tail = nullptr; // List is now empty
+        }
+        delete temp;
+    }
+
+    void pop_back() {
+        if (!tail) return; // Empty list
+        Node* temp = tail;
+        tail = ail->prev;
+        if (tail) {
+            tail->next = nullptr;
+        } else {
+            head = nullptr; // List is now empty
+        }
+        delete temp;
+    }
+
+    void delete_val(int value) {
+        if (!head
