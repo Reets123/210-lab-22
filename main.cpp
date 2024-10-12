@@ -150,4 +150,10 @@ public:
     }
 
     void delete_val(int value) {
-        if (!head
+        if (!head) return; // Empty list
+        Node* temp = head;
+        while (temp && temp->data != value)
+            temp = temp->next;
+        if (!temp) return; // Value not found
+        if (temp->prev) {
+            temp->
