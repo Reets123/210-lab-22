@@ -137,17 +137,22 @@ public:
     }
 
     void pop_back() {
-        if (!tail) return; // Empty list
-        Node* temp = tail;
-        tail = head->next;
-        if (head) {
-            head->prev = nullptr;
-        } else {
-            tail = nullptr; // List is now empty
+        if (tail == nullptr) return; // List is empty
+        if (tail == head) { // Only one element
+            delete tail;
+            head = tail = nullptr;
+            return;
         }
-        delete temp;
-    }
+        Node* current = head;
+        while (current->next != tail) {
+            current = current->next; // Find the second-last node
+        }
+        delete tail; // Delete the last node
+        tail = current; // Update tail to be the second last
+        tail->next = nullptr; // Set new tail's next to nullptr
 
+    }
+    
     void delete_val(int value) {
         if (!head) return; // Empty list
         Node* temp = head;
