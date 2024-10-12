@@ -1,6 +1,20 @@
 // Lab 22: Upgrade the DLL Class
 // COMSC-210 - Ibrahim Alatig 
 
+//    DoublyLinkedList           
+// --------------------
+// - head: Node*                   
+// - tail: Node*                   
+// -----------------------------
+// + DoublyLinkedList()            
+// + push_back(value: int): void   
+// + push_front(value: int): void  
+// + insert_after(value: int, position: int): void 
+// + delete_pos(position: int): void 
+// + pop_front(): void             
+// + pop_back(): void              
+// + delete_val(value: int):
+
 #include <iostream>
 #include <cstdlib> 
 
