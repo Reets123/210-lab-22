@@ -198,4 +198,15 @@ public:
 };
 
 int main() {
-    Doubly
+    DoublyLinkedList list;
+
+    // Generate a list with random integers
+    int size = rand() % (MAX_LS - MIN_LS + 1) + MIN_LS;
+    for (int i = 0; i < size; ++i)
+        list.push_back(rand() % (MAX_NR - MIN_NR + 1) + MIN_NR);
+    
+    cout << "List forward: ";
+    list.print();
+    
+    cout << "List backward: ";
+    list.print_re
