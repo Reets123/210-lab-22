@@ -76,4 +76,19 @@ public:
         temp->next = newNode;
     }
 
-    vo
+    void delete_pos(int position) {
+        if (position < 0) {
+            cout << "Position must be >= 0." << endl;
+            return;
+        }
+        Node* temp = head;
+        for (int i = 0; i < position && temp; ++i)
+            temp = temp->next;
+        if (!temp) {
+            cout << "Position exceeds list size. Node not deleted.\n";
+            return;
+        }
+        if (temp->prev) {
+            temp->prev->next = temp->next;
+        } else {
+            head = te
