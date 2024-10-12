@@ -13,7 +13,16 @@
 // + delete_pos(position: int): void 
 // + pop_front(): void             
 // + pop_back(): void              
-// + delete_val(value: int):
+// + delete_val(value: int): void
+// + print(): void                 
+// + print_reverse(): void         
+// ~ DoublyLinkedList()            
+//-------------------------------------
+// - Node struct                   
+// - data: int                   
+// - prev: Node*                 
+// - next: Node*                 
+// + Node(val: int, p: Node* = nullptr, n: Node* = nullptr) 
 
 #include <iostream>
 #include <cstdlib> 
