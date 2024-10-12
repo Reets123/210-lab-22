@@ -50,4 +50,19 @@ public:
     }
 
     void insert_after(int value, int position) {
-        if (position <
+        if (position < 0) {
+            cout << "Position must be >= 0." << endl;
+            return;
+        }
+        Node* newNode = new Node(value);
+        if (!head) {
+            head = tail = newNode;
+            return;
+        }
+        Node* temp = head;
+        for (int i = 0; i < position && temp; ++i)
+            temp = temp->next;
+        if (!temp) {
+            cout << "Position exceeds list size. Node not inserted.\n";
+            delete newNode;
+            retu
