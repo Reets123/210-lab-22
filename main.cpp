@@ -91,4 +91,17 @@ public:
         if (temp->prev) {
             temp->prev->next = temp->next;
         } else {
-            head = te
+            head = temp->next; // Deleting the head
+        }
+        if (temp->next) {
+            temp->next->prev = temp->prev;
+        } else {
+            tail = temp->prev; // Deleting the tail
+        }
+        delete temp;
+    }
+
+    void pop_front() {
+        if (!head) return; // Empty list
+        Node* temp = head;
+        head =
