@@ -223,4 +223,12 @@ int main() {
     list.pop_back();
     list.print();
     
-    cout << "D
+    cout << "Deleting value 45 (if exists): " << endl;
+    list.delete_val(45);
+    list.print();
+    
+    cout << "List forward after all operations: ";
+    list.print();
+    
+    return 0;
+}
