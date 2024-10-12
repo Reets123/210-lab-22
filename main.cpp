@@ -183,4 +183,19 @@ public:
         if (!current) return;
         while (current) {
             cout << current->data << " ";
-            curren
+            current = current->prev;
+        }
+        cout << endl;
+    }
+
+    ~DoublyLinkedList() {
+        while (head) {
+            Node* temp = head;
+            head = head->next;
+            delete temp;
+        }
+    }
+};
+
+int main() {
+    Doubly
